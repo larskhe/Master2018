@@ -1,0 +1,33 @@
+INCAR for high-accuracy total energy calculation.
+
+! Electronic relaxation
+ALGO   = Fast      ! Algorithm for electronic relaxation
+NELMIN = 5         ! Minimum # of electronic steps
+EDIFF  = 1E-6      ! Accuracy for electronic groundstate
+ENCUT  = 600       ! Cut-off energy for plane wave expansion
+PREC   = Normal    ! Low/Normal/Accurate
+LREAL  = Auto      ! Projection in reciprocal space?
+ISMEAR = 0         ! Smearing of partial occupancies.
+SIGMA  = 0.1       ! Smearing width
+!ISPIN  = 2        ! Spin polarization?
+!MAGMOM = 1.0 -1.0
+
+! Ionic relaxation
+NSW    = 0         ! Final high-accuracy calculation without relaxation
+!NSW    = 50        ! Final high-accuracy calculation without relaxation
+!EDIFFG = -0.05     ! Tolerance for ions
+!IBRION = 1         ! Algorithm for ions. 0: MD 1: QN/DIIS 2: CG
+!ISIF   = 3         ! Relaxation. 2: ions 3: ions+cell
+!MAXMIX = 80        ! Keep dielectric function between ionic movements
+
+! Output options
+LWAVE  = .FALSE.   ! Write WAVECAR?
+NEDOS  = 2401      ! Number of grid points for DOS
+EMIN   = -20       ! Minimum energy for evaluation of DOS
+EMAX   =  20        ! Maximum energy for evaluation of DOS
+LELF   = .TRUE.    ! Electron localization function
+LORBIT = 11        ! Write LDOS to DOSCAR + PROCAR
+ICHARG = 11        ! Added for non-self consistency
+
+! Memory handling
+NPAR    = 4        ! Should be ~sqrt(cpus)

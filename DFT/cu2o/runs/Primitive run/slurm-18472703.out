@@ -1,0 +1,60 @@
+Starting job 18472703 ("testrun1") on c7-18 at Thu Sep 28 08:58:31 CEST 2017
+/var/spool/slurmd/job18472703/slurm_script: line 20: ulimit: max memory size: cannot modify limit: Operation not permitted
+ running on    1 total cores
+ running on    1 total cores
+ running on    1 total cores
+ running on    1 total cores
+ distrk:  each k-point on    1 cores,    1 groups
+ distrk:  each k-point on    1 cores,    1 groups
+ distrk:  each k-point on    1 cores,    1 groups
+ distrk:  each k-point on    1 cores,    1 groups
+ distr:  one band on    1 cores,    1 groups
+ distr:  one band on    1 cores,    1 groups
+ distr:  one band on    1 cores,    1 groups
+ distr:  one band on    1 cores,    1 groups
+ using from now: INCAR     
+ using from now: INCAR     
+ using from now: INCAR     
+ using from now: INCAR     
+ vasp.5.3.5 31Mar14 (build Apr 28 2014 12:24:55) complex                        
+  
+ vasp.5.3.5 31Mar14 (build Apr 28 2014 12:24:55) complex                        
+  
+ vasp.5.3.5 31Mar14 (build Apr 28 2014 12:24:55) complex                        
+  
+ vasp.5.3.5 31Mar14 (build Apr 28 2014 12:24:55) complex                        
+  
+ POSCAR found type information on POSCAR  Cu O 
+ POSCAR found type information on POSCAR  Cu O 
+ POSCAR found type information on POSCAR  Cu O 
+ POSCAR found type information on POSCAR  Cu O 
+ POSCAR found :  2 types and       6 ions
+ POSCAR found :  2 types and       6 ions
+ POSCAR found :  2 types and       6 ions
+ POSCAR found :  2 types and       6 ions
+ Error reading item 'RWIGS' from file INCAR.
+ Error code was IERR=0 ... . Found N=    1 data.
+ Error reading item 'RWIGS' from file INCAR.
+ Error code was IERR=0 ... . Found N=    1 data.
+ Error reading item 'RWIGS' from file INCAR.
+ Error code was IERR=0 ... . Found N=    1 data.
+ Error reading item 'RWIGS' from file INCAR.
+ Error code was IERR=0 ... . Found N=    1 data.
+
+Currently Loaded Modulefiles:
+  1) intel/2015.3       4) gnuplot/5.0.4      7) vasp/5.4.1.Feb16
+  2) libffi/3.0.13      5) vesta/3.3.8
+  3) python2/2.7.10     6) intel/2016.1
+
+Job script resource usage:
+       JobID  MaxVMSize     MaxRSS 
+------------ ---------- ---------- 
+18472703.ba+    221332K      3503K 
+
+Job step resource usage:
+       JobID    JobName  AllocCPUS  MaxVMSize     MaxRSS    Elapsed ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- -------- 
+18472703       testrun1         16                         00:00:23      0:0 
+18472703.0    pmi_proxy          1    275552K       557K   00:00:16      0:0 
+
+Job 18472703 ("testrun1") completed on c7-18 at Thu Sep 28 08:58:47 CEST 2017

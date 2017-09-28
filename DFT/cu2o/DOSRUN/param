@@ -1,0 +1,14 @@
+#Fermi level in eV. Pick it up from vasprun.xml or DOSCAR
+fermi=5.8362
+#Minumum energy levels accepted
+emin=-20.0
+#Maximum energy levels accepted
+emax=20.0
+#Number of points along high symmetry lines. Pick it up from vasprun.xml or KPOINTS
+symres=20
+#High symmetry points. Use G and D for Gamma and Delta respectively. Only uses space between each point.
+sympoints=G X M G R X G M R
+# coloring, 1.0=yes, 0.0=no
+coloring=0.0
+# lines=0.0, dots=1.0
+lineorsymbol=0.0
