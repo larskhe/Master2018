@@ -1,0 +1,68 @@
+\documentclass[10pt,a4paper,english,fleqn,twoside]{report}
+
+
+\usepackage{mystyle}
+\usepackage{asymptote}
+%––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+% FILES TO BE INCLUDED
+%––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+% TITLEPAGE main
+\include{Parts/titlepage}
+
+% FRONTMATTER
+\include{Parts/frontmatter}
+
+% INTRO part
+\include{Parts/introduction}
+
+% TECHNIQUES part
+\include{Parts/techniques}
+
+% THEORY part
+\include{Parts/theory}
+
+% EXPERIMENTAL
+\include{Parts/experimental}
+
+% RESULTS
+\include{Parts/results}
+
+% DISCUSSION
+\include{Parts/discussion}
+
+% CONCLUSION
+\include{Parts/conclusion}
+
+\title{Master}
+
+\begin{document}
+	%\pagestyle{frontmatter}
+	%\titlepage
+    %\clearpage
+	%\pagenumbering{roman}
+	%\setcounter{page}{1}
+    %\maketitle
+	%\frontmatter
+	%\tableofcontents
+	%\newpage
+   %
+    %\pagenumbering{arabic}
+	%\setcounter{page}{1}
+  %
+%
+    %\pagestyle{mainmatter}
+    %\introduction 
+	\theory 
+	%\techniques
+	%\experimental
+	%\results
+    %\discussion
+	%\conclusion
+
+\bibliographystyle{unsrtnat}
+\bibliography{mainbib}
+
+%\pagestyle{mainmatter}
+
+\end{document}

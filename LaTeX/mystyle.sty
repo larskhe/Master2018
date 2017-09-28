@@ -1,0 +1,199 @@
+%%
+%%   This is file `mystyle.sty'
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              D O N ' T    T O U C H    T H I S                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\fileversion{1.0}
+\def\filedate{2016/03/30}
+
+\typeout{-- Package: `mystyle' \fileversion\space <\filedate> --}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mystyle}[\filedate\space\fileversion]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                C U S T O M I S E   B E L O W                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc}
+\usepackage{babel,textcomp}
+%\usepackage{ascii,textcomp}
+\usepackage[T1]{fontenc,url}
+\urlstyle{sf}
+
+%\usepackage{draftwatermark}
+%\SetWatermarkText{DRAFT}
+%\SetWatermarkScale{1}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{amsfonts}
+
+\usepackage{lscape}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{sidecap}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{multicol}
+	\setlength{\columnsep}{1.5cm}%
+	\setlength{\columnseprule}{0.4pt}
+\usepackage{lipsum}
+\usepackage[usenames,dvipsnames]{xcolor,colortbl}
+\usepackage{tgschola}
+\usepackage{epstopdf}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{mdframed}
+
+\usepackage{sectsty}
+\allsectionsfont{\bfseries\sffamily}
+%\usepackage{showframe} 
+
+% ??????????????????????????????
+% MATLAB
+
+\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
+% ??????????????????????????????
+%\usepackage{polynom}
+%\polyset{vars=z,
+%  style=C,
+%  delims={\big(}{\big)},
+%  div=:
+%}
+
+% ??????????????????????????????
+% TikZ set-up
+
+\usepackage{tikz}
+\usetikzlibrary{intersections}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing,patterns}
+
+% ??????????????????????????????
+% HEADERS & FOOTERS
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancy}
+
+% Header
+
+%\renewcommand\headrule{\begin{minipage}{1.0\textwidth}
+%\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt 
+%\end{minipage}}%
+
+% Footer
+
+%\renewcommand\footrule{\begin{minipage}{1.0\textwidth}
+%\hrule width \hsize height 2pt \kern 1mm \hrule width \hsize 
+%\begin{center}
+%\begin{scaletikzpicturetowidth}{\textwidth}
+%\begin{tikzpicture}[scale=\tikzscale]
+%	\draw[thick] 	(-6,0) .. controls (-6,0.2) .. (-0.1,-0.1)
+%				-- (0.1,0.1) .. controls (6,-0.2) .. (6,0)
+%				.. controls (6,0.2) .. (0.1,-0.1)
+%				-- (-0.1,0.1) .. controls (-6,-0.2) .. (-6,0);
+%\end{tikzpicture}
+%\end{scaletikzpicturetowidth}
+%\end{center}  
+%\end{minipage}\par}%
+
+ % Clears all headers and footers
+\fancyhf{}
+\fancypagestyle{frontmatter}{%
+  \renewcommand{\headrulewidth}{0pt}% No header rule
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+  \fancyhf{}% Clear header/footer
+  \fancyfoot[C]{\thepage}%
+}
+\fancypagestyle{mainmatter}{%
+  \renewcommand{\headrulewidth}{.4pt}% Header rule
+  \renewcommand{\footrulewidth}{0pt}% Footer rule
+  \fancyhf{}% Clear header/footer
+  \fancyhead[L]{\leftmark}% Chapter in header Left
+  \fancyhead[R]{\rightmark}% Page number in header Right
+  \fancyfoot[C]{\thepage}
+}
+\fancypagestyle{backmatter}{%
+	\renewcommand{\headrulewidth}{.4pt}% Header rule
+  	\renewcommand{\footrulewidth}{0pt}% Footer rule
+  	\fancyhf{}% Clear header/footer
+  	\fancyhead[R]{\rightmark}% 
+  	\fancyfoot[C]{\thepage}
+}
+% ??????????????????????????????
+% MARGINS
+
+%\let\oldmarginpar\marginpar
+% renew the \marginpar command to draw 
+% a node; it has a default setting which 
+% can be overwritten
+%\renewcommand\marginpar[2][rectangle,draw=blue!80!black,fill=blue!20!white,rounded corners]{%    
+		% \oldmarginpar{%
+       % \begin{tikzpicture}[scale=10cm]
+        %	\node at (1,0) [#1]{\scriptsize{#2}};%
+        %\end{tikzpicture}}
+       % }%
+% ??????????????????????????????
+% CUSTOM COMMANDS
+
+\newcommand{\MeV}[0]{\text{MeV}}
+\newcommand{\intinf}[0]{\int_{-\infty}^{\infty}}
+\newcommand{\exval}[1]{\langle #1 \rangle}
+\newcommand{\nl}[0]{\\[.2cm]}
+\newcommand{\e}[1]{\times10^{#1}}
+
+\newcommand{\intzinf}{\int\limits_{0}^{\infty}}
+\newcommand{\para}[1]{\left( #1 \right)}
+\newcommand{\fpara}[1]{\left[ #1 \right]}
+\newcommand{\series}[2]{#1 _{1}, #1 _{2}, #1 _{3},\dots, #1 _{#2}}
+\newcommand{\eq}{\,=\,}
+\newcommand{\dx}[1]{\text{ d} #1}
+\newcommand{\ben}[1]{\text{ #1}}
+\newcommand{\pd}[2] {\frac{\partial #1}{\partial #2}}
+\newcommand{\pdsq}[2]{\frac{\partial^2 #1}{\partial #2 ^2}}
+\newcommand{\cox}{Cu$_2$O}
+
+\renewcommand{\deg}{^{\circ}\text{C}}
+\renewcommand{\vec}[1]{\textbf{#1}}
+\renewcommand{\exp}[1]{\text{exp}\para{#1}}
+
+% CUSTOM SECTIONS AND PARTS
+\usepackage{titlesec}
+
+
+\renewcommand{\thechapter}{\arabic{chapter}}
+\titleformat{\chapter}[display]
+{\bfseries\Large}
+{%\Huge\textsc{\chaptertitlename}
+\hfill\fontsize{28}{30}\selectfont\color{lightgray}\textsf{\thechapter}}
+{-2ex}
+{\filleft\fontsize{25}{50}\selectfont\color{black!90}\textsf}
+[\vspace{0ex}]
+
+\renewcommand{\part}{\chapter}
+
+% ??????????????????????????????
+% CUSTOM COLORS
+
+\definecolor{babyblue}{rgb}{0.63,0.79,0.95}
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.55}
+\definecolor{chartreuse}{cmyk}{40.0,0.0,100.0,0.0}
+\definecolor{cottoncandy}{rgb}{1.0, 0.74, 0.85}
+\definecolor{uio}{cmyk}{0,100,100,0}
+
+
+
+% INTEXT NOTES
+\newcommand{\intextnote}[1]{ \textcolor{uio}{\Large{\textsc{\textbf{#1}}}} }
+
+%\graphicspath{ {Figures/} }
+%\newenvironment{Figure}
+%  {\par\medskip\noindent\minipage{\linewidth}}
+%  {\endminipage\par\medskip}
+
+
