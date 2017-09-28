@@ -1,0 +1,32 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Busch(1989)]{Busch1989}
+Georg Busch.
+\newblock Early history chemistry of the physics and semiconductors-from doubts
+  to fact in a hundred years.
+\newblock \emph{European Journal of Physics}, 10:\penalty0 254--264, 1989.
+
+\bibitem[Becquerel(1839)]{Becquerel1839}
+E.~Becquerel.
+\newblock Memoire sur les effets {\'e}lectriques produits sous l’influence
+  des rayons solaires.
+\newblock \emph{Comptes Rendus Hebdomadaires des Seances de L'Academie des
+  Sciences}, 55:\penalty0 561--567, 1839.
+
+\bibitem[Pourbaix(1945)]{Pourbaix1945}
+Pourbaix.
+\newblock \emph{Thermodynamique des Solutions Aqueuses Diluees. Representation
+  Graphique du Role du pH et du Potentiel.}
+\newblock PhD thesis, Université Libredes Bruxelles, 1945.
+
+\bibitem[Beverskog and Puigdomenech(1995)]{Beverskog1995}
+Bj{\"{o}}rn Beverskog and Ignasi Puigdomenech.
+\newblock {Revised Pourbaix Diagrams for Copper at 5-150 °C}.
+\newblock \emph{Swedish Nuclear Power Inspectorate}, 1995.
+
+\end{thebibliography}

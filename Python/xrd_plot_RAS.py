@@ -16,6 +16,7 @@ def cm2inch(*tupl):
         return tuple(i/inch for i in tupl)
 
 fileDir = '../Lab/XRD/all_in_one/'
+custom_dir = '/Users/lars/Skole/Master/Thesis/LaTeX/Figures'
 
 list_of_files_in_dir = []
 for file in os.listdir(fileDir):
@@ -80,6 +81,13 @@ def save_plot_small(two_theta,intensity,fileName):
     fig.subplots_adjust(left=0.13, right=0.95, top=0.95, bottom=0.16)
     fig.savefig(pngDir + "/" + fileName + '_small' + ".png", format="png")
     fig.savefig(epsDir + "/" + fileName + '_small' + ".eps", format="eps")
+    user_input = input(' Do you want to save any of these figures to\n %s' %(custom_dir))
+    if user_input == 'n':
+        'break'
+    else:
+        user_input = input(' Want to save \n %s \n to \n %s \n as well? (y/n)' %(fileName, custom_dir))
+        if user_input == 'y':
+            fig.savefig(custom_dir + "/" + fileName + '_small' + ".eps", format="eps")
 
 def save_comparison_plot(two_theta,intensity_array):
     
@@ -97,6 +105,7 @@ def save_comparison_plot(two_theta,intensity_array):
     fig.subplots_adjust(left=0.1, right=0.98, top=0.95, bottom=0.10)
     fig.savefig(pngDir + "/" + 'Comparison_of_the_above' + ".png", format="png")
     fig.savefig(epsDir + "/" + 'Comparison_of_the_above' + ".eps", format="eps")
+    
 
 intensity_list = []
 
@@ -104,11 +113,12 @@ wanted_start_angle = 30
 wanted_end_angle = 85
 
 for file in list_of_files_in_dir:
+
     want_custom_angle = 1  ## 0 = No, 1 = Yes
     two_theta,intensity = data_collection(file)
     intensity_list.append(intensity)
     intensity_array = np.column_stack(intensity_list)
+    #save_plot_large(two_theta,intensity,file)
+    save_plot_small(two_theta,intensity,file)
 
-    save_plot_large(two_theta,intensity,file)
-
-save_comparison_plot(two_theta,intensity_array)
+#save_comparison_plot(two_theta,intensity_array)
