@@ -1,5 +1,5 @@
-from pylab import*
-import scipy
+#!/usr/bin/python3
+
 import numpy as np
 import os
 import matplotlib.pyplot as plt
@@ -69,7 +69,12 @@ def save_plot_large(two_theta,intensity,fileName):
     fig.subplots_adjust(left=0.10, right=0.98, top=0.9, bottom=0.15)
     fig.savefig(pngDir + "/" + fileName + '_large' + ".png", format="png")
     fig.savefig(epsDir + "/" + fileName + '_large' + ".eps", format="eps")
-
+    ## Include if want to save to LaTeX custom directory as well
+    '''
+    user_input = input(' Want to save \n %s \n to \n %s \n as well? (y/n)' %(fileName, custom_dir))
+    if user_input == 'y':
+        fig.savefig(custom_dir + "/" + fileName + '_small' + ".eps", format="eps")
+    '''
 def save_plot_small(two_theta,intensity,fileName):
     fig = plt.figure(figsize=cm2inch(16,8))
     #fig.suptitle(fileName, fontsize=12, fontweight='light')
@@ -81,13 +86,12 @@ def save_plot_small(two_theta,intensity,fileName):
     fig.subplots_adjust(left=0.13, right=0.95, top=0.95, bottom=0.16)
     fig.savefig(pngDir + "/" + fileName + '_small' + ".png", format="png")
     fig.savefig(epsDir + "/" + fileName + '_small' + ".eps", format="eps")
-    user_input = input(' Do you want to save any of these figures to\n %s' %(custom_dir))
-    if user_input == 'n':
-        'break'
-    else:
-        user_input = input(' Want to save \n %s \n to \n %s \n as well? (y/n)' %(fileName, custom_dir))
-        if user_input == 'y':
-            fig.savefig(custom_dir + "/" + fileName + '_small' + ".eps", format="eps")
+    '''
+    ## Include if want to save to LaTeX custom directory as well
+    user_input = input(' Want to save \n %s \n to \n %s \n as well? (y/n)' %(fileName, custom_dir))
+    if user_input == 'y':
+        fig.savefig(custom_dir + "/" + fileName + '_small' + ".eps", format="eps")
+    '''
 
 def save_comparison_plot(two_theta,intensity_array):
     
@@ -105,6 +109,12 @@ def save_comparison_plot(two_theta,intensity_array):
     fig.subplots_adjust(left=0.1, right=0.98, top=0.95, bottom=0.10)
     fig.savefig(pngDir + "/" + 'Comparison_of_the_above' + ".png", format="png")
     fig.savefig(epsDir + "/" + 'Comparison_of_the_above' + ".eps", format="eps")
+    '''
+    ## Include if want to save to LaTeX custom directory as well
+    user_input = input(' Want to save \n %s \n to \n %s \n as well? (y/n)' %(fileName, custom_dir))
+    if user_input == 'y':
+        fig.savefig(custom_dir + "/" + fileName + '_small' + ".eps", format="eps")
+    '''
     
 
 intensity_list = []
