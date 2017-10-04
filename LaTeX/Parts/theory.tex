@@ -23,13 +23,34 @@ The photovoltaic (PV) effect, and subsequently photoelectrocemistry, was discove
 
 \subsection{Understanding the Semiconductor}
 
-The basic idea of semiconductors is easiest explained by showing how atoms and the corresponding electron energies behave when bonding to other atoms, going from single atom electron energies through more complex energy levels in molecules to bands of energy in solids. As shown in figure \ref{fig:energy_bands}, electrons are only allowed to occupy certain energies, or states, and weather these states are filled or not depends on the energy of the electron in question. Instead of 
+The basic idea of semiconductors is easiest explained by showing how atoms and the corresponding electron energies behave when bonding to other atoms, going from single atom electron energies through more complex \textit{energy levels} in molecules to \textit{energy bands} in solids. Electrons are only allowed to occupy certain energies, or states, and weather these states are filled or not depends on the energy of the electron in question. The number of electrons allowed at given energies, or rather the density of allowed energies, \intextnote{insert DOS.plot} are called \textit{density of states}; DOS for short.
+
 \begin{figure}[ht!]
 \centering
 \includegraphics[scale=1]{Figures/Energy_bands1.eps}
 \caption{Schematics showing energy bands for different number of atoms}
 \label{fig:energy_bands}
 \end{figure}
+
+Figure \ref{fig:energy_bands} depicts these allowed energies and show how they overlap to form bands when a high number of atoms come together to form a bulk material. The semiconductor is special in that energy bands are separated in the area around an important energy level called Fermi level, $E_F$, typically by \intextnote{insert number plus ref.} forming a gap in the allowed energies; this discontinuity is also observed in the DOS plot shown in fig \intextnote{ref DOS.plt}. 
+
+To further discuss this concept this new parameter is introduced, namely the \textit{Fermi energy level}, $E_F$. Since electrons in solids obey \textit{Fermi-Dirac} statistics\footnote{Fermi-Dirac statistics builds on quantum mechanical principles such as indistinguishably of electrons and the wave nature of electrons. Further details on Fermi-Dirac statistics will not be given in this text. Readers are directed to more comprehensive texts on the subject, such as \citet{Schroeder1999} and \citet{Kittel2004}}  it is possible to show that the distribution of electrons over a range of allowed energies $E$ at thermal equilibrium is
+
+\begin{align}
+f(E) \eq \dfrac{1}{1+\exp{(E-E_F)/kT}}
+\label{eq:fermi-dirac-distribution}
+\end{align}
+
+where $k$ is Boltzmann's constant\footnote{$k\eq 8.62\e{-5}\ben{eVK}^{-1}$}. Equation \ref{eq:fermi-dirac-distribution} gives the probability that an available state is filled or not at absolute temperature $T$. When $E\eq E_F$
+
+\begin{align}
+f(E) \eq \dfrac{1}{1+\exp{(E_F-E_F)/kT}} \eq \dfrac{1}{1+1} \eq \dfrac{1}{2}
+\end{align}
+
+the 'definition' of the Fermi energy level appears: the probability of having an electron occupy the energy state corresponding to the Fermi level is 50\%. \citep{Streetman2015} Another simplified way to explain Fermi energy level: the Fermi level equals the potential of electrons in the solid at 0 K. 
+
+
+
 
 Semiconductors differs from other materials in that the bulk material have certain prohibited electron energy levels. When these atoms come together to form (typically) a crystal, the electron energy levels overlap and from energy levels
 
