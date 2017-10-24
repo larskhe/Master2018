@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{10}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -43,5 +43,31 @@ Pourbaix.
 Bj{\"{o}}rn Beverskog and Ignasi Puigdomenech.
 \newblock {Revised Pourbaix Diagrams for Copper at 5-150 °C}.
 \newblock \emph{Swedish Nuclear Power Inspectorate}, 1995.
+
+\bibitem[Sholl and Steckel(2009)]{Sholl2009}
+David Sholl and Janice~A Steckel.
+\newblock \emph{Density Functional Theory: A Practical Introduction}.
+\newblock Wiley-Interscience, 2009.
+\newblock ISBN 0470373172.
+\newblock URL
+  \url{https://www.amazon.com/Density-Functional-Theory-Practical-Introduction/dp/0470373172?SubscriptionId=0JYN1NVW651KCA56C102&tag=techkie-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0470373172}.
+
+\bibitem[Hohenberg and Kohn(1964)]{Hohenberg1964}
+P.~Hohenberg and W.~Kohn.
+\newblock {Inhomogeneous Electron Gas}.
+\newblock 136\penalty0 (3B):\penalty0 B864--B871, nov 1964.
+\newblock ISSN 0031-899X.
+\newblock \doi{10.1103/PhysRev.136.B864}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.136.B864}.
+
+\bibitem[Kohn and Sham(1965)]{Kohn1965}
+W.~Kohn and L.~J. Sham.
+\newblock {Self-Consistent Equations Including Exchange and Correlation
+  Effects}.
+\newblock \emph{Physical Review}, 140\penalty0 (4A):\penalty0 A1133--A1138, nov
+  1965.
+\newblock ISSN 0031-899X.
+\newblock \doi{10.1103/PhysRev.140.A1133}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.140.A1133}.
 
 \end{thebibliography}
