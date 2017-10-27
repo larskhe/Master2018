@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.28)  24 OCT 2017 11:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.28)  25 OCT 2017 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1802,7 +1802,7 @@ erted-to.pdf Figures/Fermi_DOS.eps>
 (epstopdf)             \includegraphics on input line 56.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Fermi_DOS-eps-converted-to.pdf, id=81, 183.68625pt x 118.4425pt>
+<Figures/Fermi_DOS-eps-converted-to.pdf, id=82, 183.68625pt x 118.4425pt>
 File: Figures/Fermi_DOS-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/Fermi_DOS-eps-converted-to.pdf>
@@ -1824,7 +1824,7 @@ Package epstopdf Info: Source file: <Figures/1stBZ_cu2o.eps>
 verted-to.pdf Figures/1stBZ_cu2o.eps>
 (epstopdf)             \includegraphics on input line 56.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/1stBZ_cu2o-eps-converted-to.pdf, id=83, 92.345pt x 91.34125pt>
+<Figures/1stBZ_cu2o-eps-converted-to.pdf, id=84, 92.345pt x 91.34125pt>
 File: Figures/1stBZ_cu2o-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/1stBZ_cu2o-eps-converted-to.pdf>
@@ -1832,7 +1832,7 @@ Package pdftex.def Info: Figures/1stBZ_cu2o-eps-converted-to.pdf used on input
 line 56.
 (pdftex.def)             Requested size: 92.34476pt x 91.34102pt.
  [2 <./Figures/Fermi_DOS-eps-converted-to.pdf>] <Figures/pourbaix_generic.png, 
-id=117, 257.5221pt x 257.5221pt>
+id=118, 257.5221pt x 257.5221pt>
 File: Figures/pourbaix_generic.png Graphic file (type png)
 
 <use Figures/pourbaix_generic.png>
@@ -1844,7 +1844,58 @@ Overfull \hbox (29.89941pt too wide) in paragraph at lines 56--56
  []
 
 [3 <./Figures/1stBZ_cu2o-eps-converted-to.pdf> <./Figures/pourbaix_generic.png>
-] [4] (./main.bbl [5]
+]
+
+LaTeX Warning: Reference `eq:Hamiltonian' on page 4 undefined on input line 56.
+
+
+[4]
+Package epstopdf Info: Source file: <Figures/Kohn-Sham.eps>
+(epstopdf)                    date: 2017-10-25 16:45:55
+(epstopdf)                    size: 2000462 bytes
+(epstopdf)             Output file: <Figures/Kohn-Sham-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-25 16:46:33
+(epstopdf)                    size: 33004 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/Kohn-Sham-eps-conv
+erted-to.pdf Figures/Kohn-Sham.eps>
+(epstopdf)             \includegraphics on input line 56.
+Package epstopdf Info: Output file is already uptodate.
+ <Figures/Kohn-Sham-eps-converted-to.pdf, id=160, 247.92625pt x 303.1325pt>
+File: Figures/Kohn-Sham-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Figures/Kohn-Sham-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/Kohn-Sham-eps-converted-to.pdf used on input l
+ine 56.
+(pdftex.def)             Requested size: 247.92564pt x 303.13176pt.
+
+Overfull \hbox (20.30359pt too wide) in paragraph at lines 56--56
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
+\T1/qcs/m/n/10 where $\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ([])$ \T1/qcs/m/n/10 is
+ the elec-tron den-sity, hence \T1/qcs/b/n/10 den-sity func-tional the-ory\T1/q
+cs/m/n/10 .
+ []
+
+
+Underfull \hbox (badness 3907) in paragraph at lines 56--56
+\T1/qcs/m/n/10 is pos-si-ble by find-ing a func-tion of
+ []
+
+
+Underfull \hbox (badness 1648) in paragraph at lines 56--56
+\T1/qcs/m/n/10 three vari-ables rather than $\OT1/cmr/m/n/10 3\OML/cmm/m/it/10 
+N$ \T1/qcs/m/n/10 vari-
+ []
+
+
+Underfull \hbox (badness 1173) in paragraph at lines 56--56
+[]\T1/qcs/m/n/10 The prob-lem with this the-o-rem is
+ []
+
+(./main.bbl [5 <./Figures/Kohn-Sham-eps-converted-to.pdf>] [6]
 LaTeX Font Info:    Try loading font information for TS1+qcs on input line 44.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/tex-gyre/ts1qcs.fd
@@ -1873,7 +1924,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--54
 mp = 2025 & creative = 165953 &
  []
 
-) [6
+) [7
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
@@ -1891,19 +1942,22 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 68.
  ) 
 Here is how much of TeX's memory you used:
- 31435 strings out of 492995
- 588161 string characters out of 6132704
- 772563 words of memory out of 5000000
- 34404 multiletter control sequences out of 15000+600000
- 66723 words of font info for 60 fonts, out of 8000000 for 9000
+ 31454 strings out of 492995
+ 588492 string characters out of 6132704
+ 775797 words of memory out of 5000000
+ 34415 multiletter control sequences out of 15000+600000
+ 68271 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,70p,10416b,355s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/lo
-cal/texlive/2017/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/local/texli
+ 62i,13n,70p,10416b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/
+local/texlive/2017/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/local/tex
+live/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texli
 ve/2017/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}</usr/local/texlive/201
 7/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2017
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2017/
@@ -1925,10 +1979,10 @@ ss1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfss
 1440.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfss24
 88.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfss2986
 .pfb>
-Output written on main.pdf (6 pages, 309318 bytes).
+Output written on main.pdf (7 pages, 343305 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
- 217 compressed objects within 3 object streams
- 39 named destinations out of 1000 (max. 500000)
- 97 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 294 PDF objects out of 1000 (max. 8388607)
+ 240 compressed objects within 3 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 102 words of extra memory for PDF output out of 10000 (max. 10000000)
 

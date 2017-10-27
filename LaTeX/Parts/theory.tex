@@ -110,7 +110,7 @@ In a two electrode set-up, one electrode would
 
 Modeling of complex structures and systems has become more readily accessible with time as the computational power of the world has increased at an incredible rate. Also a lot of effort has been made to optimize these calculations and materials scientist today are preforming calculations on large systems with complex structural interactions with high accuracy. The results of these calculations are sometimes impossible to obtain from experimental data and often provide invaluable information. 
 
-This section is to a large extent adopted from the comprehensive book on density functional theory by \citet{Sholl2009}
+This section is to a large extent adopted and modified from the comprehensive book on density functional theory by \citet{Sholl2009}
 
 \subsection{Many Particle Schrödinger Equation}
 
@@ -123,11 +123,11 @@ One of the fundamental things we want to solve is the energy of atoms and \texti
 
 where $\hat{H}$ is the Hamiltonian operator and $\psi$ is a set of eigenstates of the Hamiltonian, all with an associated eigenvalue $E$; a real number satisfying the eigenvalue equation.
 
-The situation of interest to us, a many-particle system, we need to apply a Hamiltonian to tackle all these interactions.
+The situation of interest to us, a many-particle system, we need to apply a Hamiltonian to tackle all these interactions. SE would the be
 
 \begin{align}
-\hat{H}\eq \dfrac{h^2}{2m}\sum_{i=1}^{N}\nabla^2_i\,+\, \sum_{i=1}^{N}V(\vec{r}_i) \,+\, \sum_{i=1}^{N}\sum_{j<1}U(\vec{r}_i,\vec{r}_i)
-	\label{eq:Hamiltonian}
+\fpara{\dfrac{h^2}{2m}\sum_{i=1}^{N}\nabla^2_i\,+\, \sum_{i=1}^{N}V(\vec{r}_i) \,+\, \sum_{i=1}^{N}\sum_{j<1}U(\vec{r}_i,\vec{r}_i)} \psi = E\psi
+	\label{eq:many_particle_SE}
 \end{align}
 
 $m$ being the electron mass, $h$ Planck's constant\footnote{$h\eq6.62\e{-34}\ben{Js}$} and $N$ the number of atoms in the system. The sums represent the kinetic energy of electrons, interaction energy between electron $i$ and the nuclei, and the electron-electron interaction, respectively. The energy $E$ in equation \ref{eq:schrödinger_simple} is the ground state energy of the electrons.
@@ -147,7 +147,7 @@ n(\vec{r})\eq 2 \sum_i \psi_i^*(\vec{r})\psi_i(\vec{r})
 \label{eq:electron_density}
 \end{align}
 
-such that the term inside the summation is the probability that an electron with corresponding wave function $\psi_i(\vec{r})$ is located at $\vec{r}$; the factor of 2 accounting for Paulis exclusion principle, allowing two electrons of different spin to occupy the same wave function. The fact that the electron density $n(\vec{r})$ at any point is a function of only three coordinates will prove extremely useful in calculations of SE 
+such that the term inside the summation is the probability that an electron with corresponding wave function $\psi_i(\vec{r})$ is located at $\vec{r}$; the factor of 2 accounting for Paulis exclusion principle, allowing two electrons of different spin to occupy the same wave function. The fact that the electron density $n(\vec{r})$ at any point is a function of only three coordinates will prove extremely useful in calculations of atom stuctures utilizing SE; henceforth known as \textit{density functional theory.}
 
 %As the nucleus and electron mass differs immensely; the nucleus being 1800 times more heavy than the electron, we can split this problem in two parts. First the \textit{ground state }of electrons are solved by finding the lowest energy configuration of these electrons moving in the field of atomic nuclei at fixed positions. The separation of these two problems are called Born-Oppenheimer approximation
 
@@ -158,9 +158,70 @@ The field of density functional theory (DFT) is basically founded on two mathema
 \begin{align}
 E\fpara{n(\vec{r})}
 \end{align}
-where $n(\vec{r})$ is the electron density, hence \textbf{density functional theory}. In practice this means that solving SE is possible by finding a function of three variables rather than $3N$ variables, since the ground state electron density uniquely determine all properties, including the energy and wave function. 
+where $n(\vec{r})$ is the electron density, hence \textbf{density functional theory}.
+%%%%%%%% figure: Pourbaix_generic %%%%%%%%%%%%%%%%
+	\begin{wrapfigure}{l}{0.5\textwidth}
+		\centering
+		\includegraphics[scale=1]{Figures/Kohn-Sham.eps}
+		\caption{Kohn-Sham schematics}
+		\label{fig:Kohn-Sham_selfconsistency}
+	\end{wrapfigure}
+%%%%%%%% end_figure: Pourbaix_generic %%%%%%%%%%%%
+In practice this means that solving SE is possible by finding a function of three variables rather than $3N$ variables, since the ground state electron density uniquely determine all properties, including the energy and wave function. 
 
-The problem with this theroem is that although it states that a functional like this exist, it does not declare what this functional is, although an important property of this functional is defined in the second Hohenberg-Kohn theorem: \textit{The electron density that minimizes the energy of the overall functional is the true electron density corresponding to the full solution of SE}, meaning that if the 'correct' functional were known, varying the electron density and subsequently finding an energetic minimum in the system would yield the relevant electron density; this \textit{variation principle} is what is practically implemented in computational functional calculations such as PBE, PBE0, HSE06 etc.
+The problem with this theorem is that although it states that a functional like this exist, it does not declare what this functional is, although an important property of this functional is defined in the second Hohenberg-Kohn theorem: \textit{The electron density that minimizes the energy of the overall functional is the true electron density corresponding to the full solution of SE}, meaning that if the 'correct' functional were known, varying the electron density and subsequently finding an energetic minimum in the system would yield the relevant electron density; this \textit{variation principle} is what is practically implemented in computational functional calculations such as PBE, PBE0, HSE06 etc.
 
-Using that the electron density, $n(\vec{r})$, are defined by the single 
+Using the property that the electron density, $n(\vec{r})$, are defined by the single-electron wave functions from, as of equation \ref{eq:electron_density}, the Hohenberg-Kohn theroem can be written as
+
+\begin{align}
+E\fpara{\cpara{\psi_i}} \eq E_{\text{known}}\fpara{\cpara{\psi_i}} \,+\, E_{\text{XC}}\fpara{\cpara{\psi_i}}
+\end{align}
+splitting the functional into two parts: one known and one collecting everything unknown, $E_{\text{XC}}$. The known terms have four contributions
+\begin{align}
+E_{\text{known}}\fpara{\cpara{\psi_i}} 	\eq 
+		\dfrac{h^2}{m}	\sum_{i}\int \psi_i^* \nabla^2 \psi_i \, \text{d}^3 r 
+		\plus
+		\int V(\vec{r})n(\vec{r})\,\text{d}^3 r 
+		\plus
+		\dfrac{e^2}{2} 
+		\iint \dfrac{
+			n(\vec{r})n(\vec{r}\prime)
+						}
+						{
+			\abs{\vec{r}-\vec{r}\prime}}
+			\,\text{d}^3 r \,\text{d}^3 r\prime + E_{\text{ion}}
+\end{align}
+and unknown term, $E_{\text{XC}}$, is called the exchange-correlation functional and include all the quantum mechanical effects left out in $E_{\text{known}}$. The complexity of the calculations are at this point not guarantied to be simpler than solving the full SE, but this changes as one includes the Kohn-Sham equation
+
+\begin{align}
+\fpara{\dfrac{h^2}{2m}\nabla^2
+\plus V(\vec{r}) \plus V_{\text{H}}(\vec{r}) + V_{\text{XC}}(\vec{r})
 }
+\psi_i(\vec{r})	\eq \varepsilon_i\psi_i(\vec{r})
+\end{align}
+where the correct electron density is found by a set of equations, each equation involving only one electron. The Kohn-Sham equation itself is somewhat similar to equation \ref{eq:many_particle_SE} but is missing the summations as this is in fact single electron wave functions only dependent on $\psi_i(\vec{r})$. The three potentials $V$, $V_{\text{H}}$ and $V_{\text{XC}}$ is the potential defined by electron and nuclei, the Hartree potential 
+
+As shown in figure \ref{fig:Kohn-Sham_selfconsistency} this 
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
